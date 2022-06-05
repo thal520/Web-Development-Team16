@@ -1,0 +1,109 @@
+nav{
+    height: 80px;
+    background: rgb(23, 77, 83) ;
+}
+nav .glyphicon{
+    position:fixed;
+    right:10px;
+    top:15px;
+}
+.admin-wrapper{
+    height: 670px;
+    display: flex;
+
+}
+.admin-wrapper .left-sidebar{
+    flex: 2;
+    height: 100%;
+    background: rgb(55, 115, 121);
+
+}
+
+.admin-wrapper .admin-content{
+    flex:8;
+    height: 100%;
+    padding: 40px 100px 100px;
+    overflow-y: scroll;
+}
+.admin-wrapper .left-sidebar ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    color: aliceblue;
+
+}
+.admin-wrapper .left-sidebar ul li{
+    padding: 18px;
+    display: block;
+    border-bottom: 1px solid rgb(27, 74, 79);
+    text-decoration: none;
+}
+.admin-wrapper .left-sidebar ul li:hover{
+    background: rgb(27, 74, 79);
+    text-decoration: none;
+    color: aliceblue;
+
+}
+
+li a:hover{
+    color: aliceblue;
+    text-decoration: none;
+}
+.admin-wrapper .admin-content .button{
+    background: rgb(23, 77, 83);
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 13px 30px;
+    border-radius: 30px;
+    transform: scale(0.9);
+    margin-right: 25px;
+}
+
+
+.button-group{
+    margin-bottom: 25px;
+}
+
+.admin-wrapper .admin-content .button:hover{
+    cursor: pointer;
+    text-decoration: none;
+    color: aliceblue;
+    background: rgb(55, 115, 121);
+}
+.admin-content .page-title{
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1.5rem ;
+}
+th, td{
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid lightgray;
+} 
+
+.delete{
+    color: red ;
+
+    font-weight: bolder;
+}
+
+.text-input{
+    padding: .7rem 1rem;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    outline: none;
+    color: grey;
+    line-height: 1.5rem;
+    font-size: 1.3em;
+
+}
+form div{
+    margin-bottom: 8px;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin Login</title>
+</head>
+<link rel="icon" href="../../favicon.ico?v2" />
+<link rel="stylesheet" href="/login.css">
+<body>
+    <div class="title">
+        <h2>Login Form</h2>
+    </div>
+    <form action="/admin/albums/index" method="post">
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" autocomplete="off" required >
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" autocomplete="off" required>    
+            <button id="myButton" type="submit">Login</button>
+            <!-- <script type="text/javascript">
+                document. getElementById("myButton"). onclick = function () {
+                location. href = "views/albums/index.html";
+                };
+                </script> -->
+               
+        </div>
+    </form>
+
+    </body>
+    
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Album</title>
+    <link rel="icon" href="favicon.ico?v2" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Limelight&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Qahiri&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="stylepage.css"/>
+    <link rel="stylesheet" href="footer.css">
+  </head>
+  
+  <body>
+    <%- include("./navbar.ejs") %> 
+    <div class="mainblock2">
+      <div class="album mainbox">
+        <img src="<%=album.album_img%>" class="boximg" />
+        <p><%=album.album%></p>
+      </div>
+      <div class="album_about description_box">
+        <h3 class="mainheaders">Album description</h3>
+        <p>
+          This album was released in <%=album.year%><br><br>
+          <%=album.descr%>
+        </p>
+        <h4>Musical Performance</h4>
+        <ul>
+          <li><a href="artist<%=artist._id%>"><%=album.artist%></a></li>
+        </ul>
+        <h4> Lyrics </h5>
+        <ul>
+          <% lyrics.forEach(lyricswriter=>{%>
+            <li><%= lyricswriter%></li>
+          <%})%> 
+          
+          <!-- <li>Lyricswriter 2</li>
+          <li>Lyricswriter 3</li>
+          <li>Lyricswriter 4</li> -->
+        </ul>
+        <h4> Music </h5>
+        <ul>
+          <% music.forEach(composer=>{%>
+            <li><%=composer%></li>
+          <%})%> 
+        </ul>
+      </div>
+    </div>
+    <h3 id="songs_name" class="miniheaders">Songs</h3>
+    <div class="miniblock albumsongs">          
+      <% songs.forEach(song=>{%>
+        
+        <a href ="/song<%=song._id%>">
+          <div class="albumsongs minibox">
+          <img src="<%=song.song_img%>" alt="<%=song.song%>" class="songimg miniboximg" />
+        
+          <p><%=song.song%></p>
+        </div>
+      </a>
+        <%})%>
+      <!-- <div class="albumsongs minibox">
+        <a href="https://www.youtube.com/watch?v=lWA2pjMjpBs&ab_channel=RihannaVEVO" target="_blank">
+          <img src="images\rihanna_s1.jpg" alt="song 1" class="songimg miniboximg" /></a>
+        <p>Diamonds</p>
+      </div>
+      <div class="albumsongs minibox">
+        <img src="images/matt-moloney-Axo.jpg" alt="song 2" class="songimg miniboximg"/>
+        <p>.....</p>
+      </div>
+      <div class="albumsongs minibox">
+        <img src="images/giorgio-trovato.jpg" alt="song 3" class="songimg miniboximg"/>
+        <p>.....</p>
+      </div>
+      <div class="albumsongs minibox">
+        <img src="images/vidar-nordli-mathisen.jpg" alt="song 4" class="songimg miniboximg"/>
+        <p>.....</p>
+      </div>-->
+    </div>
+  
+    <%- include("./footer.ejs") %> 
+  </body>
+  <script src="navbar.js"></script> 
+  <script src="footer.js"></script> 
+  </html>
+

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Song</title>
+    <link rel="icon" href="favicon.ico?v2" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Limelight&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Qahiri&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="stylepage.css"/>
+    <link rel="stylesheet" href="footer.css">
+  </head>
+  
+  <body>
+    <%- include("./navbar.ejs") %> 
+
+    <div class="mainblock2">
+
+        <div class="song mainbox">
+            <img src="<%=song.song_img%>" class="boximg" />
+            <p><%=song.song%></p>
+        </div>
+        <div class="song_about description_box">
+            <h3 class="mainheaders"><%=song.song%></h3>
+            <h4>Artist</h4>
+            <ul>
+                <li><a href="artist<%=artist._id%>"><%=song.artist %></a></li>
+            </ul>
+            <h4>Album</h4>
+            <ul>
+                <li><a href="artist<%= album._id %>"><%=song.album %></a></li>
+            </ul>
+            <h4> Lyrics </h4>
+            <ul>
+                <li><%=song.lyrics%></li>
+
+            </ul>
+            <h4> Music </h4>
+            <ul>
+                <li><%=song.music%></li>
+            </ul>
+            <h4> Year </h4>
+            <ul>
+                <li><%=song.year%></li>
+            </ul>
+
+        </div>
+    </div>
+    <%- include("./footer.ejs") %> 
+  </body>
+  <script src="navbar.js"></script> 
+  <script src="footer.js"></script>
+  </html>
+

@@ -1,0 +1,164 @@
+.footer {
+  color: whitesmoke;
+  padding: 5% 0;
+  display: flex;
+  background-color: rgb(42, 37, 37);
+  margin-top: 100px;
+
+  
+}
+.footer-bottom{
+  background: rgb(21, 18, 18);
+  color: rgba(211, 211, 211, 0.274);
+  text-align: center;
+  height: 30px;
+  width: 100%;
+  /* position: absolute;
+  bottom: 0px;
+  left: 0px; */
+  padding-top: 20px;
+}
+.footer .footer-content .aboutus{
+  /* ;
+  font-size: 0.5em;
+  border: none;
+  background-color: none;
+  text-align:initial; */
+  font-size: 1em;
+  width: 400px;
+  background-color: none;
+  
+}
+
+.footer .footer-section h3{
+  text-align: center;
+}
+.footer .footer-content{
+  display: flex;
+  justify-content:space-evenly;
+  width: 100%;
+  /* margin:auto 20px; */
+}
+
+.footer .footer-content.footer-section{
+  flex: 2;
+  margin: auto;
+  padding: 100px;
+
+}
+.footer .footer-content h3{
+  color:  aliceblue;
+}
+.footer .footer-content .message{
+  text-align: center;
+  
+}
+.footer .footer-content .message .contact-input{
+  background: rgb(74, 66, 66) ;
+  color: aliceblue;
+  margin-bottom: 10px;
+  line-height: 1.5rem;
+  padding: .7rem 1.2rem;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+
+
+.social-container{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer .footer-content .message .buton{
+  background: rgb(19, 19, 19) ;
+  color: rgb(240, 248, 255);
+  border: 2px solid transparent;
+  font-weight: bold;
+  padding: 13px 40px;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  transition: .4s;
+  transform: scale(0.9);
+}
+
+.buton:hover{
+  cursor: pointer;
+}
+
+.footer .footer-content .newsletter{
+  display: block;
+  /* flex-direction: column-reverse; */
+  padding: 30px 30px 30px 0; 
+}
+
+
+.footer .footer-content .newsletter #news #email{
+  background: rgb(74, 66, 66) ;
+  color: aliceblue;
+  border-radius: 10px;
+
+}
+
+.news-input{
+  display: inline-block;
+  background-color:rgb(74, 66, 66) ;
+  width: fit-content;
+  font-size: inherit;
+  border-radius: 50px;
+
+}
+
+#news{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.news-input input{
+  border: none;
+}
+
+.news-input button{
+  background: none;
+  border: none;
+}
+
+.news-input button:hover{
+  cursor: pointer;
+}
+
+.fas{
+  padding: 5px;
+  text-align: center;
+  
+}
+.fa-solid{
+  font-size: 12px;
+  background: none;
+  border: none;
+  display: inline-block;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  /* background-size: cover; */ 
+}
+.fa:hover {
+  /* opacity: 0.7; */
+  cursor: pointer;
+  transform: scale(1.5);
+
+}
+#news{
+  display: none;
+}
+@media screen and (max-width: 992px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+}
+ 

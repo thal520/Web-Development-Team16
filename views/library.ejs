@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Library</title>
+    <link rel="icon" href="favicon.ico?v2" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Limelight&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Qahiri&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/36bce782d3.js" crossorigin="anonymous"></script>
+
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
+    
+ 
+    
+    <link rel="stylesheet" href="/navbar.css">
+
+    <link rel="stylesheet" href="/stylepage.css" />
+    
+    <link rel="stylesheet" href="/footer.css" />
+    <link rel="stylesheet" href="/carousel.css"/>
+
+    
+    <style></style>
+  </head>
+  
+  <body>
+
+    <%- include('./navbar.ejs'); %>
+    <div class="main">
+
+      <% years.forEach((year)=>{ %>
+        <h1 class="mainheaders"><%=year%></h1>
+        <div id="year<%=year%>" class="libblock mainblock2">
+        <% albums.forEach(album=>{%>
+          <%if (year==album.year){%>
+            <a href = "/album<%= album._id %>">
+              <div id="<%= album._id %>" class="album mainbox">
+
+                <img src="<%=album.album_img%>" alt="<%=album.album%>" class="albumimg boximg"/>
+                <p><%=album.album%><br>
+                  <span><%=album.artist%></span></p>
+              </div>    
+            </a>  
+        <% }})  %>
+        </div>
+      <%})%>
+    </div> 
+    <%- include('./footer.ejs'); %>
+  </body>
+  
+  <script src="navbar.js"></script>
+</html>
+        
+      <!-- <div id="albums2021" class="block2021 mainblock">
+        <div class="album mainbox">
+          <img src="images/albums/alessio.jpg" alt="album 9" class="albumimg boximg" />
+          <p>Album 9</p>
+        </div>
+        <div class="album mainbox">
+          <img src="images/albums/evie.jpg" alt="album 8" class="albumimg boximg"/>
+          <p>Album 8</p>
+        </div> -->
+      
+      <!-- <h1 class="mainheaders">2022</h1>
+      <div id="albums2022" class="block2022 mainblock">
+        <div class="album mainbox">
+          <a href="libraryalbum13.html"><img src="images/albums/mika.jpg" alt="album 13" class="albumimg boximg" /></a>
+          <p>Album 13</p>
+        </div>
+        <div class="album mainbox">
+          <img src="images/albums/joshua-fuller.jpg" alt="album 12" class="albumimg boximg" />
+          <p>Album 12</p>
+        </div>
+        <div class="album mainbox">
+          <img
+            src="images/albums/florian-klauer.jpg"
+            alt="album 11"
+            class="albumimg boximg"
+          />
+          <p>Album 11</p>
+        </div>
+        <div class="album mainbox">
+          <img src="images/albums/de-andre-bush.jpg" alt="album 11" class="albumimg boximg" />
+          <p>Album 10</p>
+        </div>
+      </div>
+      <h1 class="mainheaders">2021</h1>
+      <div id="albums2021" class="block2021 mainblock">
+        <div class="album mainbox">
+          <img src="images/albums/alessio.jpg" alt="album 9" class="albumimg boximg" />
+          <p>Album 9</p>
+        </div>
+        <div class="album mainbox">
+          <img src="images/albums/evie.jpg" alt="album 8" class="albumimg boximg"/>
+          <p>Album 8</p>
+        </div>
+        <div class="album mainbox">
+          <img src="images/albums/annie-spratt.jpg" alt="album 7" class="albumimg boximg"/>
+          <p>Album 7</p>
+        </div>
+        <div class="album mainbox">
+          <img src="images/albums/brett-jordan.jpg" alt="album 6" class="albumimg boximg"/>
+          <p>Album 6</p>
+        </div>
+      </div>
+      <h1 class="mainheaders">2020</h1>
+      <div id="albums202" class="block2020 mainblock">
+        <div class="album mainbox">
+          <img src="images/albums/sheldon.jpg" alt="album 5" class="albumimg boximg" />
+          <p>Album 5</p>
+        </div>
+        <div class="album mainbox">
+          <img src="images/albums/simona.jpg" alt="album 4" class="albumimg boximg"/>
+          <p>Album 4</p>
+        </div>
+        <div class="album mainbox">
+          <img src="images/albums/steve-johnson.jpg" alt="album 3" class="albumimg boximg"/>
+          <p>Album 3</p>
+        </div>
+      </div>
+      <h1 class="mainheaders">2019</h1>
+      <div id="albums2019" class="block2019 mainblock">
+        <div class="album mainbox">
+          <img src="images/albums/valentin-muller.jpg" alt="album 2" class="albumimg boximg" />
+          <p>Album 2</p>
+        </div>
+        <div class="album mainbox">
+          <img src="images/albums/stewart-maclean.jpg" alt="album 1" class="albumimg boximg"/>
+          <p>Album 1</p>
+        </div>
+        </div>
+      </div> -->
+

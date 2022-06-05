@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Top 10</title>
+    <link rel="icon" href="favicon.ico?v2" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Limelight&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Qahiri&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="top10.css"/>
+    <link rel="stylesheet" href="stylepage.css"/>
+    <link rel="stylesheet" href="footer.css">
+  </head>
+  
+
+  <body>
+    <%- include("./navbar.ejs")%> 
+    <h1 class="mainheaders">Top 10 songs</h1>
+    <div id="top10songs" class="top10 mainblock2">
+      <% songs.forEach((song)=>{ %>
+        <a href = "song<%=song._id%>">
+        <div class="song mainbox">
+          <img src="<%=song.song_img%>" alt="<%=song.song%>" class="songimg boximg"/>
+        <p><%=song.song%><br>
+          <span><%song.artist%></span></p>
+        </div>
+        </a>
+      <% })  %>
+      </div>
+    <!-- <div id="t10" class="t10block mainblock2">
+      <div class="top mainbox">
+        <img src="images/jakayla.jpg" alt="jakayla" class="topimg boximg"/>
+        <p>Song 1</p>
+      </div>
+      <div class="top mainbox">
+        <img src="images/juairia.jpg" alt="juairia" class="topimg boximg"/>
+        <p>Song 2</p>
+      </div>
+      <div class="top mainbox">
+        <img src="images/karly-santiago.jpg" alt="karly" class="topimg boximg"/>
+        <p>Song 3</p>
+      </div>
+      <div class="top mainbox">
+        <img src="images/yasmin-dangor.jpg" alt="yasmin" class="topimg boximg"/>
+        <p>Song 4</p>
+      </div>
+      <div class="top mainbox">
+        <img src="images/neonbrand1.jpg" alt="neon" class="topimg boximg"/>
+        <p>Song 5</p>
+      </div>
+      <div class="top mainbox">
+        <img src="images/eyoel.jpg" alt="eyoel" class="topimg boximg"/>
+        <p>Song 6</p>
+      </div>
+      <div class="top mainbox">
+        <img src="images/matt-moloney.jpg" alt="matt" class="topimg boximg"/>
+        <p>Song 7</p>
+      </div>
+      <div class="top mainbox">
+        <img src="images/patrick-perkins.jpg" alt="patrick" class="topimg boximg"/>
+        <p>Song 8</p>
+      </div>
+      <div class="top mainbox">
+        <img src="images/egor.jpg" alt="egor" class="topimg boximg"/>
+        <p>Song 9</p>
+      </div>
+      <div class="top mainbox">
+        <img src="images/zeynep-emecikli.jpg" alt="zeynep" class="topimg boximg"/>
+        <p>Song 10</p>
+      </div>
+    </div>-->
+    <br><br><br><br><br>
+    <h1 class="mainheaders">top10 albums</h1>
+    <div id="top10albums" class="top10 mainblock2">
+      <% albums.forEach((album)=>{ %>
+        <div class="song mainbox">
+          <img src="<%=album.album_img%>" alt="<%=album.album%>" class="songimg boximg"/>
+        <p><%=album.album%><br>
+          <span><%=album.artist%></span></p>
+        </div>
+      <% })  %>
+      </div>
+      
+        <!-- <div class="best mainbox">
+          <img src="images\albums\alessio.jpg" alt="alessio" class="bestimg boximg"/>
+          <p>Album 1</p>
+        </div>
+        <div class="best mainbox">
+          <img src="images\albums\annie-spratt.jpg" alt="annie" class="bestimg boximg"/>
+          <p>Album 2</p>
+        </div>
+        <div class="best mainbox">
+          <img src="images\albums\brett-jordan.jpg" alt="brett" class="bestimg boximg"/>
+          <p>Album 3</p>
+        </div>
+        <div class="best mainbox">
+          <img src="images\albums\evie.jpg" alt="avie" class="bestimg boximg"/>
+          <p>Album 4</p>
+        </div>
+        <div class="best mainbox">
+          <img src="images\albums\florian-klauer.jpg" alt="florian" class="bestimg boximg"/>
+          <p>Album 5</p>
+        </div>
+        <div class="best mainbox">
+          <img src="images\albums\joshua-fuller.jpg" alt="joshua" class="bestimg boximg"/>
+          <p>Album 6</p>
+        </div>
+        <div class="best mainbox">
+          <img src="images\albums\mika.jpg" alt="mika" class="bestimg boximg"/>
+          <p>Album 7</p>
+        </div>
+        <div class="best mainbox">
+          <img src="images\albums\steve-johnson.jpg" alt="steve" class="bestimg boximg"/>
+          <p>Album 8</p>
+        </div>
+        <div class="best mainbox">
+          <img src="images\albums\stewart-maclean.jpg" alt="stewart" class="bestimg boximg"/>
+          <p>Album 9</p>
+        </div>
+        <div class="best mainbox">
+          <img src="images\albums\valentin-muller.jpg" alt="valentin" class="bestimg boximg"/>
+          <p>Album 10</p>
+        </div>
+      </div> -->
+    <%- include('./footer.ejs') %> 
+  </body>
+  <script src="navbar.js"></script> 
+  <script src="footer.js"></script>
+</html>

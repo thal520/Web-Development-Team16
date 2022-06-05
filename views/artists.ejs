@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Artists</title>
+    <link rel="icon" href="favicon.ico?v2" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Limelight&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Qahiri&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="artist_page.css">
+    <link rel="stylesheet" href="stylepage.css">
+    <link rel="stylesheet" href="footer.css">
+    
+  </head>
+  
+
+  <body>
+    <%- include('./navbar.ejs') %> 
+
+    <div class="main">
+      <div id="singers" class="mainblock2">
+        <% artists.forEach(artist=>{%>
+          <div class="mainbox">
+            <a href="artist<%=artist._id%>"><img src="<%= artist.artist_img%>" class="boximg" /></a>
+            <p><%=artist.artist%></p>
+          </div>
+        <%})%>
+        <!--<div class="side-bar">
+          <a href="artist_page.html"><img src="images\adele.jpg" class="adele boximg" /></a>
+          <p>Adele</p>
+        </div>-->
+      
+    </div>
+    <%- include('./footer.ejs')%>
+  </body>
+  <script src="navbar.js"></script> 
+  <script src="footer.js"></script>
+</html>
+
+

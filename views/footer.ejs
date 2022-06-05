@@ -1,0 +1,59 @@
+<head>
+  <script src="https://kit.fontawesome.com/36bce782d3.js" crossorigin="anonymous"></script>
+
+
+<div class="footer">
+  <div class="footer-content">
+    <div class="footer-section contact">
+      <h3>Contact Us</h3><br>
+      <div class="social-container">
+        <img src="images\icons\facebook.png" alt="fb" class="fa fa-facebook-f">
+        <img src="images\icons\twitter.png" alt="twiter" class="fa fa-twitter">
+        <img src="images\icons\insta.png" alt="insta" class="fa fa-instagram"> 
+      </div>
+      <br>
+      <span><i class="fas fa-phone"></i>&nbsp; 123-456-789</span>
+      <span><i class="fas fa-envelope"></i>&nbsp; info@disco.com </span><br><br>
+
+      <label>Do you want to get emailed for our news?
+        <input type="checkbox" name="click" id="click"></label><br>
+        <form action="/newsletter" method="post"  class="newsletter" id="news">
+          <label id="type" for="email" >Type your email address</label>
+            <div class="news-input">
+              <input type="email" name="email" id="email" autocomplete="off" required>
+              <button href="#" >
+              <i class="fa-solid fa-paper-plane"></i>
+              </button>
+              <!--  -->
+            </div>
+          </form>
+    </div>
+    <div class="footer-section aboutus">
+      
+      <h3>About Us</h3><br>
+      <p>Our aim is to promote new and creative artists that seek to audiotape their songs in order to share their artwork with the world.
+        If you are a singer, songwriter or a composer we are glad to help you discover the ideal cooperators that suit you and your visions.
+        It will be our pleasure, if you are interested in collaborating with us, to send us a message.
+      </p><br>
+    </div>  
+    <div class="footer-section message">
+      <h3>Send us a message</h3><br>
+      <form action="/message" method="post" id = "message">
+        <input type="email" name="email" class="text-input contact-input" autocomplete="off" placeholder="Your email adress..." required>
+        <br>
+        <textarea name="message" class="text-input contact-input" placeholder="Your message.." name="message" form="message" required ></textarea><br>
+        <button type="submit" class="buton">Send</button>  
+      </form>
+        <!--  -->
+        <br><br>
+      
+    </div>
+  </div>
+</div>
+  <div class="footer-bottom">
+    &copy; ece.upatras.gr | Designed by Katerina & Thaleia
+
+  </div>
+  <script src="footer.js"></script>
+
+</head>

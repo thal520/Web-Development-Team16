@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>discO</title>
+    <link rel="icon" href="favicon.ico?v2" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Limelight&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Qahiri&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/36bce782d3.js" crossorigin="anonymous"></script>
+
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
+    
+ 
+    
+    <link rel="stylesheet" href="/navbar.css">
+
+    <link rel="stylesheet" href="/stylepage.css" />
+    
+    <link rel="stylesheet" href="/footer.css" />
+    <link rel="stylesheet" href="/carousel.css"/>
+
+    
+    <style></style>
+  </head>
+
+  <body>
+      <%-  include("navbar.ejs") %>
+
+    <div class="mainbuttons">
+    <div class="main page-wrapper">
+      <h1 class="mainheaders">Recently Added</h1>
+      <i class="fas fa-chevron-left prev" ></i>
+      <i class="fas fa-chevron-right next"></i>
+    <div class="mainblock post-wrapper">
+      <% recents.forEach((recent)=>{ %>
+        <a href ="/song<%=recent._id%>">
+        <div class="recent mainbox post-info">
+          <img src="<%=recent.song_img%>" alt="<%=recents.song%>" class="slider-image recentimg boximg"/>
+        <p><%=recent.song %><br>
+          <span><%=recent.artist%></span></p>
+        </div>
+      </a>
+      <% })  %>
+    </div>
+      <h1 class="mainheaders">Hits of the week</h2>
+        <div id="Hits" class="homeblock mainblock2">
+        <% hits.forEach((hit)=>{ %>
+          <a href ="/song<%=hit._id%>">
+          <div class="hit mainbox">
+            <img src="<%=hit.song_img%>" alt="jakayla" class="hitimg boximg"/>
+          <p><%=hit.song%><br>
+            <span><%=hit.artist%></span></p>
+          </div>
+          </a>
+        <% })  %>
+
+        </div>
+        <h1 class="mainheaders">Coming Soon</h2>
+          
+          <div id="soon" class="homeblock mainblock2">
+            <% comingSoon.forEach((soon)=>{ %>
+              <a href ="song/<%=soon._id%>">
+              <div class="hit mainbox">
+                <img src="<%=soon.song_img%>" alt="jakayla" class="soonimg boximg"/>
+              <p><%=soon.song%><br>
+                <span><%=soon.artist%></span></p>
+              </div>
+            <% })  %>
+          </a>
+      
+    </div>
+    <%-  include("footer.ejs") %>
+  </body>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="carousel.js"></script>
+  <script src="navbar.js"></script>
+ 
+</html>
+

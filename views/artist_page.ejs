@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Record Company</title>
+    <link rel="icon" href="favicon.ico?v2" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Limelight&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Qahiri&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="homepage.css" />
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="artist_page.css">
+    <link rel="stylesheet" href="stylepage.css">
+    <link rel="stylesheet" href="footer.css">
+    <style></style>
+  </head>
+
+  <body>
+    <%- include("./navbar.ejs") %> 
+    <div class="mainblock2">
+      <div class="artist mainbox">
+        <img src="<%=artist.artist_img%>" class="boximg" />
+        <p><%=artist.artist%></p>
+      </div>
+      <div class="artist_about description_box">
+        <h3 class="mainheaders">Biography</h3>
+        <p>
+          <%=artist.artist_bio%>
+        </p>
+      </div>
+    </div>
+    <h3 id="albums_names" class="miniheaders">Albums</h3>
+    <div class="miniblock artistalbums"> 
+      <% albums.forEach(album=>{%>
+        <a href="album<%= album._id %> "><div class="artistalbums minibox">
+          <img src="<%=album.album_img%>" alt="<%=album.album%>" class="albumimg miniboximg" />
+          <p><%=album.album%></p>
+        </div> </a>
+        <%})%>
+    </div>
+    <%- include("./footer.ejs") %> 
+  </body>
+  <script src="navbar.js"></script> 
+  <script src="footer.js"></script>
+</html>

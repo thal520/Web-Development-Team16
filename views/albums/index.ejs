@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Page-Manage Albums</title>
+    <link rel="icon" href="../../favicon.ico?v2" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Limelight&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Qahiri&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- <link rel="stylesheet" href="../../navbar2.css"> -->
+    <link rel="stylesheet" href="../../stylepage.css" />
+    <link rel="stylesheet" href="/admin.css">
+  </head>
+
+  <body>
+    <header>
+      <div>
+        <nav>
+          <a href="/admin/login" class="btn btn-info btn-lg glyphicon glyphicon-log-out"></a>
+          <!--
+            How to Link Submit Button to Another Page in HTML
+            
+            <button id="myButton" type="submit">Login</button>
+            <script type="text/javascript">
+                document. getElementById("myButton"). onclick = function () {
+                location. href = "views/albums/index.html";
+                };
+                </script> -->
+        </nav>
+    </div>
+  </header>
+  
+
+    <div class="admin-wrapper">
+      <div class="left-sidebar">
+        <ul>
+          <li><a href="/admin/albums">Manage Albums</a></li>
+          <li><a href="/admin/songs">Manage Songs</a></li>
+          <li><a href="/admin/artists">Manage Artists</a></li>      
+          <li><a href="/admin/emails">Show Emails</a></li>
+          <li><a href="/admin/messages">Show Messages</a></li>
+        </ul>
+      </div>
+
+      <div class="admin-content">
+        <div class="button-group">
+          <a href="/admin/albums/create" class="button" >Add Album</a>
+          <a href="/admin/albums" class="button">Manage Album</a>
+        </div>
+
+        <div class="content">
+          <h2 class="page-title">Manage Albums</h2>
+          <table>
+            <thead>
+              <th>Album</th>
+              <th>Artist</th>
+              <th>Year</th>
+              <th>Description</th>
+              <th >Action</th>
+            </thead>
+            <tbody>
+              <% albums.forEach(album=>{ %> 
+              <tr>
+                <td><%= album.album %> </td>
+                <td><%= album.artist %></td>
+                <td><%= album.year %></td>
+                <td><%= album.album_descr%></td>
+                <td><a href="/admin/albums/delete<%=album._id%>" class="delete">delete</a></td>
+              </tr>
+            <% }) %> 
+            </tbody>
+
+
+          </table>
+
+        </div>
+        
+      </div>
+    </div>
+  
+  </body>
+</html>

@@ -1,0 +1,66 @@
+/*.display-container{
+    margin-top:14em;
+    color: aliceblue;
+    text-align: center;
+}
+*/
+
+/* .singer_about{
+    display: inline-block;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    text-align: justify;
+    width: 50%;
+    background-color: rgba(39, 38, 38, 0.5);
+    color:aliceblue;
+} */
+
+/* .side-bar{
+    display: inline-block ;
+    flex-direction: column;
+    width: 225px;
+    margin-right: 3em;
+    background-color: brown;
+    text-align: center;
+} */
+
+/* #singer_name{
+    font-size: 20px;
+} */
+
+/* .singer_about h3{
+    font-weight: 600;
+    font-size: 30px;
+    margin-top: 5px;
+} */
+
+/* .rihanna{
+    height: 280px;
+    background-size: cover;
+} */
+
+/* .singers_songs{
+    flex-direction: column; 
+    width: 90%;
+    margin-bottom: 50px;
+}
+.songimg{
+    height: 180px;
+    width: 180px;
+    object-fit:cover;
+    background-size: cover;
+}
+
+.song{
+    background-color: brown;
+    display:inline-block;
+    margin: 0px 20px;
+}
+
+#songs_name{
+    font-size:20px;
+    background-color: rgba(39, 38, 38, 0.5);
+    color:aliceblue;
+    width:fit-content;
+    margin: 2em auto;
+} */

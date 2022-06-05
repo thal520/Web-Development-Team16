@@ -1,0 +1,92 @@
+.mainblock {
+  overflow: hidden !important;
+  /* display: inline !important; */
+  width: 90%;
+  max-height: 345px;
+  /* display: flex; */
+  text-align: center;
+  margin: 0 auto;
+}
+.mainbox {
+  overflow: hidden !important;
+  display: inline-flex;
+  /* display: inline-block; */
+  position: relative;
+  /* height: 350px;
+    width: 300px; */
+  /* margin: 0 20px; */
+  background-color: whitesmoke;
+  text-align: center;
+  font-size: 1.5em;
+  margin: 1em;
+  color: #333333;
+  box-shadow: 5px 5px 5px 5px rgba(217, 87, 87, 0.5);
+  width: 260px !important;
+}
+
+.next {
+  position: absolute;
+  top: 8%;
+  right: 80px;
+  font-size: 2em;
+  color: #333333;
+  cursor: pointer;
+  z-index: 10;
+}
+.prev {
+  position: absolute;
+  top: 8%;
+  left: 80px;
+  font-size: 2em;
+  color: #333333;
+  cursor: pointer;
+  z-index: 10;
+}
+div.mainbuttons{
+  position: relative !important;
+}
+/* .boximg{
+    display: inline;
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    border: 5px solid whitesmoke;
+ } */
+
+/* div.mainbox:hover{
+    transform: scale(1.05);
+    z-index: 100;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+} */
+/* .mainblock{
+    width: 80%;
+    background-color: white;
+    overflow-y: hidden;
+} */
+@media screen and (max-width: 1150px) {
+  .mainblock {
+    width: 100% !important;
+  }
+  .next {
+    right: 15px;
+    top: 8% !important;
+  }
+  .prev {
+    left: 5px;
+    top: 8% !important;
+  }
+  .next:hover{
+      background-color: aliceblue;
+      border-radius: 50%;
+      width:35px;
+      height: 35px;
+
+  }
+  .prev:hover{
+    background-color: aliceblue;
+    border-radius: 50%;
+    width:35px;
+    height: 35px;
+
+}
+}
