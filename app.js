@@ -82,6 +82,17 @@ app.get('/all', async (req, res)=> {
 app.get('/admin/login', (req, res)=> {
   res.render("login")
 })
+app.post('/admin/albums', async (req, res) => {
+  const albums = await Album.find()
+  let username = req.body.uname
+  let password = req.body.psw
+  console.log(username,password)
+  if (username === "admin" && password === "admin") {
+    res.render("albums/index",{albums: albums})
+  }
+  else{
+    res.redirect("login")
+  }})
 
 app.get('/admin/albums', async (req, res)=> {
   const albums = await Album.find();
