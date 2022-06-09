@@ -82,7 +82,7 @@ app.get('/all', async (req, res)=> {
 app.get('/admin/login', (req, res)=> {
   res.render("login")
 })
-app.post('/admin/albums', async (req, res) => {
+app.post('/admin/logged', async (req, res) => {
   const albums = await Album.find()
   let username = req.body.uname
   let password = req.body.psw
@@ -145,7 +145,7 @@ app.post('/admin/songs', async(req, res)=>{
     song.coming_soon = false;
     const album = await Album.findOne({"album": song.album});
     song.artist = album.artist;
-    if (song.song_img==null){
+    if (song.song_img==""){
       song.song_img = album.album_img;
     }
     if (song.year==null){
@@ -153,7 +153,7 @@ app.post('/admin/songs', async(req, res)=>{
     }
   }
   else {
-    if (song.image==null){
+    if (song.image==""){
     res.render('songs/create', {albums: albums})
     return;
     }
@@ -256,5 +256,5 @@ app.post("/newsletter", async (req, res)=>{
   let recents = await Song.find({"coming_soon": false})
   recents = recents.slice(-10);
   comingSoon = await Song.find({"coming_soon": true});
-  res.send(req.body)
+  res.render('homepage', {hits: hits, recents: recents, comingSoon:comingSoon});
 })
