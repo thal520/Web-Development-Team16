@@ -65,7 +65,7 @@
         <% hits.forEach((hit)=>{ %>
           <a href ="/song<%=hit._id%>">
           <div class="hit mainbox">
-            <img src="<%=hit.song_img%>" alt="jakayla" class="hitimg boximg"/>
+            <img src="<%=hit.song_img%>" alt="" class="hitimg boximg"/>
           <p><%=hit.song%><br>
             <span><%=hit.artist%></span></p>
           </div>
@@ -79,7 +79,7 @@
             <% comingSoon.forEach((soon)=>{ %>
               <a href ="song/<%=soon._id%>">
               <div class="hit mainbox">
-                <img src="<%=soon.song_img%>" alt="jakayla" class="soonimg boximg"/>
+                <img src="<%=soon.song_img%>" alt="" class="soonimg boximg"/>
               <p><%=soon.song%><br>
                 <span><%=soon.artist%></span></p>
               </div>
